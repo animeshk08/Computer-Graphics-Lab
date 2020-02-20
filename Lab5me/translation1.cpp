@@ -12,8 +12,8 @@ float angle=0;
 void myInit()
 {
    glClear(GL_COLOR_BUFFER_BIT);
-   glClearColor(1.0, 1.0, 1.0, 1.0);
-   glColor3f(0.0,0.0,0.0);
+   glClearColor(0.0, 0.0, 0.0, 0.0);
+   glColor3f(1.0,1.0,1.0);
    glOrtho(0, maxX, 0, maxY,-100,+100);
 }
 void draw_pixel(int x, int y) {
@@ -121,7 +121,7 @@ void draw_polygon(int x[], int y[], int n) {
 void myDisplay()
 {
     glClear(GL_COLOR_BUFFER_BIT);
-    glClearColor(1.0, 1.0, 1.0, 1.0);
+    glClearColor(0.0, 0.0, 0.0, 0.0);
     int ch,x1,x2,y1,y2,Tx,Ty,r,n;
     printf("Enter your choice\n 1. Line 2.Circle 3.Polygon 4.exit\n ");
     scanf("%d",&ch);    
@@ -134,7 +134,7 @@ void myDisplay()
         translate(&x1,&y1,Tx,Ty);
         translate(&x2,&y2,Tx,Ty);
         draw_line(x1,x2,y1,y2);
-        glClearColor(1.0, 1.0, 1.0, 1.0);
+         glClearColor(0.0, 0.0, 0.0, 0.0);
     }
 
     if(ch == 2){
@@ -145,7 +145,7 @@ void myDisplay()
         draw_circle(x1,x2,r);
         translate(&x1,&x2,Tx,Ty);
         draw_circle(x1,x2,r);
-        glClearColor(1.0, 1.0, 1.0, 1.0);
+        glClearColor(0.0, 0.0, 0.0, 0.0);
     }
 
     if(ch == 3){
@@ -161,10 +161,10 @@ void myDisplay()
     for(int i=0;i<n;i++)
       translate(&x_c[i],&y_c[i],Tx,Ty);
     draw_polygon(x_c, y_c, n);
-     glClearColor(1.0, 1.0, 1.0, 1.0);
+     glClearColor(0.0, 0.0, 0.0, 0.0);
     }
     if(ch == 4){
-        glClearColor(1.0, 1.0, 1.0, 1.0);
+       glClearColor(0.0, 0.0, 0.0, 0.0);
         exit(0);
     }
      glEnd();

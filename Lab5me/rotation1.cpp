@@ -13,8 +13,8 @@ float angle=0;
 void myInit()
 {
    glClear(GL_COLOR_BUFFER_BIT);
-   glClearColor(1.0, 1.0, 1.0, 1.0);
-   glColor3f(0.0,0.0,0.0);
+   glClearColor(0.0, 0.0, 0.0, 0.0);
+   glColor3f(1.0,1.0,1.0);
    glOrtho(0, maxX, 0, maxY,-100,+100);
 }
 void draw_pixel(int x, int y) {
@@ -128,7 +128,7 @@ void draw_polygon(int x[], int y[], int n) {
 void myDisplay()
 {
     glClear(GL_COLOR_BUFFER_BIT);
-    glClearColor(1.0, 1.0, 1.0, 1.0);
+   glClearColor(0.0, 0.0, 0.0, 0.0);
     int ch,x1,x2,y1,y2,Tx,Ty,r,n,deg;
     
     printf("Enter your choice\n 1. Line 2.Polygon 3.exit\n ");
@@ -142,7 +142,7 @@ void myDisplay()
         rotate(&x1,&y1,deg);
         rotate(&x2,&y2,deg);
         draw_line(x1,x2,y1,y2);
-        glClearColor(1.0, 1.0, 1.0, 1.0);
+        glClearColor(0.0, 0.0, 0.0, 0.0);
     }
 
     
@@ -159,10 +159,10 @@ void myDisplay()
     for(int i=0;i<n;i++)
       rotate(&x_c[i],&y_c[i],deg);
     draw_polygon(x_c, y_c, n);
-     glClearColor(1.0, 1.0, 1.0, 1.0);
+ glClearColor(0.0, 0.0, 0.0, 0.0);
     }
     if(ch == 3){
-        glClearColor(1.0, 1.0, 1.0, 1.0);
+        glClearColor(0.0, 0.0, 0.0, 0.0);
         exit(0);
     }
      glEnd();

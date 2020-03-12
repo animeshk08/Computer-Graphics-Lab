@@ -43,6 +43,12 @@ void gasket(float ax,float ay,float bx,float by,float cx,float cy,float dx,float
     gasket(m_bx,by,bx,by,bx,m_by,m_bx,m_by,n-1);
     gasket(m_cx,m_cy,cx,m_cy,cx,cy,m_cx,cy,n-1);
     gasket(dx,m_dy,m_dx,m_dy,m_dx,dy,dx,dy,n-1);
+    gasket(m_ax,ay,m_bx,by,m_bx,m_by,m_ax,m_ay,n-1);
+    gasket(m_cx,cy,m_dx,dy,m_dx,m_dy,m_cx,m_cy,n-1);
+    gasket(ax,m_ay,m_ax,m_ay,m_ax,m_dy,ax,m_dy,n-1);
+    gasket(m_bx,m_by,bx,m_by,bx,m_cy,m_bx,m_cy,n-1);
+   
+
     glFlush();
   }
 }
